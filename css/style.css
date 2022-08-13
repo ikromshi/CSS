@@ -1,13 +1,22 @@
 body {
-  padding: 10%;
+  padding: 5% 10%;
   font-size: 2rem;
-}
-
-p {
-  line-height: 1.4;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* input, button {
-  font: inherit;
-} */
+ol {
+  list-style-type: none;
+  padding: 0px;
+}
+
+ul {
+  list-style-type: square;
+  text-align: center; /*only the text moves*/
+  list-style-position: inside; /*squares move*/
+  color: #00f; /*everything is blue */
+  list-style-image: square url("../images/checkmark.png");
+}
+
+ul li:nth-child(2) { /*targeting a child in lists*/
+  color: red;  
+}
