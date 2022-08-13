@@ -1,27 +1,13 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+body {
+  padding: 10%;
+  font-size: 2rem;
 }
 
-.container {
-  border: 2px dashed red;
-  font-size: 1.2rem;
-  margin: 1.5em;
-  padding: 1.5em 1.5em;
+p {
+  line-height: 1.4;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h2 {
-  margin-top: 1em;
-}
-
-.circle {
-  margin: 3rem auto;
-  background: gold;
-  border: 2px double blue;
-  border-radius: 50%;
-  outline: 2px solid red;
-  outline-offset: 0.25rem;
-  width: 100px;
-  height: 100px;
-}
+/* input, button {
+  font: inherit;
+} */
