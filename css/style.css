@@ -1,56 +1,52 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
- margin: 0.5rem;
- font-family:Verdana, Geneva, Tahoma, sans-serif;
- text-align: center; 
-}
-
-nav {
-  border: 2px solid #333;
-  border-radius: 2rem;
-  margin: 0 auto 1rem;
-  font-size: 3rem;
-  line-height: 7rem;
-}
-
-h2 {
-  background: gold;
-  padding: 1rem;
-  border-radius: 2rem 2rem 0 0;
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
+  padding: 0.5rem;
+  text-align: right;
+  background-color: black;
+  margin-bottom: 1rem;
 }
 
 li {
-  border-top: 1px solid #333;
+  display: inline-block;
+  margin-inline: 0.5rem;
 }
 
 li a {
-  display: block;
-}
-
-li a, li a:visited {
+  color: whitesmoke;
   text-decoration: none;
-  color: #333;
 }
 
 li a:hover, li a:focus {
-  background: #333;
-  color: whitesmoke;
+  text-decoration: underline;
 }
 
-li:nth-child(5) a {
-  border-radius: 0 0 2rem 2rem;
+p {
+  background-color: lightgray;
 }
- /*
- li:last-child a {
-   .....
- }
- */
+
+.opposite {
+  display: inline-block;
+  background-color: #333;
+  color: whitesmoke;
+
+}
+
+/*
+display: block >> creates a new block
+display: inline-block >> creates a block      within a line
+
+list objects have a display: block by default
+
+
+*/
