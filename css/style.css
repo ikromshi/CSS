@@ -1,42 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.5rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif
+  min-height: 200vh;
 }
 
-.columns {
-  /* column-count: 4;
-  column-width: 250px; */
-  columns: 4 250px;
-  column-rule: 3px solid #333;
-  column-gap: 3rem;
+.outer-container {
+  border: 3px dashed #000;
+  width: 75vw;
+  height: 85vh;
+  margin: 40px auto;
+  position: relative;
 }
 
-.columns p {
-  margin-top: 0;
+.inner-container {
+  border: 2px solid #00f;
+  width: 40vw;
+  height: 40vh;
+  margin: 200px auto;
 }
 
-.columns h2 {
-  margin-top: 0;
-  background-color: #333;
+.box {
+  width: 150px;
+  height: 150px;
   color: #fff;
   padding: 1rem;
-  break-inside: avoid;
 }
 
-.columns .quote {
-  font-size: 3rem;
-  column-span: all;
-  text-align: center;
-  margin-top: 2rem;
+.absolute {
+  background-color: #00f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.nowrap {
-  break-inside: avoid;
-  white-space: nowrap;
+.relative {
+  background-color: #f00;
+  position: relative;
+  top: 400px;
+  left: 150px;
 }
 
+.fixed {
+  background-color: #0f0;
+  position: fixed;
+  top: 100px;
+  left: 200px;
+}
+
+
+.sticky {
+  background-color: #000;
+  position: sticky;
+  top: 100px;
+}
 /*
-white-space: nowrap >> keeps an element from breaking
-column-span: all >> spans the columns across the page;
+position: absolute >> needs a parent block to be
+      "relative" to be positioned relatively
+
+position: relative >> doesn't
+
+position: fixed >> fixes the container in one 
+      spot and scolls the page with it fixed on
+      top of eveything; Add z-index: 1 to move
+      another box on top of it;
+>> top: 100px (add 100px from the top)
+
+position: sticky >> makes the block stick to its
+      parent container until the parent container
+      is off the page
 
 */
+
+/**********************************************/
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  min-height: 100vh;
+}
+
+.blue {
+  background-color: #00f;
+}
+
+.red {
+  background-color: #f00;
+}
+
+.green {
+  background-color: green;
+}
+
+header, footer {
+  color: #fff;
+  text-align: center;
+  height: 100px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  font-size: 5rem;
+
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #000;
+  width: 100%;
+  font-size: 3rem;
+}
+
+a:visited {
+  color: #fff;
+}
+
+.social {
+  position: fixed;
+  top: 30%;
+  z-index: 1;
+  font-size: inherit;
+  padding: 1.5rem;
+}
