@@ -7,128 +7,66 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.5rem;
-  min-height: 200vh;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-.outer-container {
-  border: 3px dashed #000;
-  width: 75vw;
-  height: 85vh;
-  margin: 40px auto;
-  position: relative;
+.container {
+  margin-top: 100px;
+  max-width: 800px;
+  min-height: 400px;
+  margin-inline: auto;
+  border:  1px solid #333;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
-.inner-container {
-  border: 2px solid #00f;
-  width: 40vw;
-  height: 40vh;
-  margin: 200px auto;
+@media screen and (max-width: 600px) {
+  .container {
+    flex-wrap: wrap;
+  }
 }
 
 .box {
-  width: 150px;
-  height: 150px;
-  color: #fff;
-  padding: 1rem;
-}
-
-.absolute {
-  background-color: #00f;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.relative {
-  background-color: #f00;
-  position: relative;
-  top: 400px;
-  left: 150px;
-}
-
-.fixed {
-  background-color: #0f0;
-  position: fixed;
-  top: 100px;
-  left: 200px;
-}
-
-
-.sticky {
+  /* min-width: 100px; */
+  min-height: 100px;
   background-color: #000;
-  position: sticky;
-  top: 100px;
-}
-/*
-position: absolute >> needs a parent block to be
-      "relative" to be positioned relatively
-
-position: relative >> doesn't
-
-position: fixed >> fixes the container in one 
-      spot and scolls the page with it fixed on
-      top of eveything; Add z-index: 1 to move
-      another box on top of it;
->> top: 100px (add 100px from the top)
-
-position: sticky >> makes the block stick to its
-      parent container until the parent container
-      is off the page
-
-*/
-
-/**********************************************/
-
-html {
-  scroll-behavior: smooth;
-}
-
-section {
-  min-height: 100vh;
-}
-
-.blue {
-  background-color: #00f;
-}
-
-.red {
-  background-color: #f00;
-}
-
-.green {
-  background-color: green;
-}
-
-header, footer {
   color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 2;
+  flex-basis: 150px;
+
+}
+
+
+.container-two {
+  height: 40vh;
+  width: 40vw;
+  border: 1px solid #333;
+  margin: 150px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxy {
+  background-color: #333;
+  padding: 0.5em;
+  max-width: 200px;
   text-align: center;
-  height: 100px;
+  color: whitesmoke;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  font-size: 5rem;
-
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  background-color: #000;
-  width: 100%;
-  font-size: 3rem;
-}
-
-a:visited {
-  color: #fff;
-}
-
-.social {
-  position: fixed;
-  top: 30%;
-  z-index: 1;
-  font-size: inherit;
-  padding: 1.5rem;
+.nav {
+  margin-top: 1rem;
+  position: absolute;
+  right: 1rem;
 }
